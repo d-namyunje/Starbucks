@@ -1,0 +1,79 @@
+@import "./reset.css";
+body {
+  font-family: "Baloo Da 2", cursive;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.header {
+  background-color: #d3e6e0;
+}
+
+.inner_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.header_logo i {
+  font-size: 60px;
+  color: #0c917d;
+}
+
+.navbar_util {
+  display: flex;
+  padding: 20px 24px;
+}
+
+.navbar_util li {
+  padding: 8px 12px;
+}
+
+.navbar_util a {
+  color: #636363;
+}
+
+.navbar_util a:hover {
+  text-decoration-line: underline;
+}
+
+.navbar_sub_menu li {
+  padding: 12px 25px;
+}
+
+.header_toggleButton {
+  position: absolute;
+  right: 30px;
+  color: #0c917d;
+  font-size: 25px;
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+  .header_logo i {
+    font-size: 45px;
+  }
+
+  .navbar_util,
+  .navbar_sub_menu {
+    display: none;
+  }
+
+  .header_logo {
+    top: 0;
+    float: left;
+  }
+
+  .header_toggleButton {
+    display: block;
+  }
+}
