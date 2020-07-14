@@ -25,6 +25,7 @@
               <li><a href="#">Find a Store</a></li>
             </ul>
             <div class="navbar_util_search">
+              <input type="text" class="input_search" placeholder="통합검색" />
               <span class="search_span"><i class="fas fa-search"></i></span>
             </div>
           </nav>
@@ -38,15 +39,41 @@
               <li>WHAT'S NEW</li>
             </ul>
           </nav>
-          <a href="#" class="header_toggleButton">
-            <i class="fas fa-bars"></i>
-          </a>
         </div>
       </div>
+      <a href="#" class="header_userButton">
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="#" class="header_locationButton">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+      <a href="#" class="header_toggleButton">
+        <i class="fas fa-bars"></i>
+      </a>
     </header>
     <script
       src="https://kit.fontawesome.com/7c1606ce35.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const searchButton = document.querySelector(".search_span");
+      const searchInput = document.querySelector(".input_search");
+
+      searchButton.addEventListener("click", () => {
+        const navbarUtil = document.querySelector(".navbar_util");
+
+        if (searchInput.clientWidth < 130) {
+          let increaseSearchInput = setInterval(() => {
+            if (searchInput.clientWidth >= 130) {
+              clearInterval(increaseSearchInput);
+            }
+            searchInput.style.width = searchInput.clientWidth + 1 + "px";
+          }, 15);
+
+          navbarUtil.style.width = 680 + "px";
+          navbarUtil.style.right = 45 + "px";
+        }
+      });
+    </script>
   </body>
 </html>

@@ -19,6 +19,9 @@ ul {
   left: 0;
   top: 0;
   position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
 }
 
 .inner_header {
@@ -36,10 +39,11 @@ ul {
 }
 
 .navbar_util {
+  float: right;
   height: 20px;
-  right: 93px;
+  right: -10px;
   top: 15px;
-  width: 550px;
+  width: 600px;
   position: absolute;
   display: flex;
 }
@@ -56,22 +60,35 @@ ul {
   text-decoration-line: underline;
 }
 
-.navbar_util .navbar_util_search {
-  cursor: pointer;
+.navbar_util_search {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
-.search_span {
+.navbar_util_search .input_search {
+  width: 0px;
+  font-size: 13px;
+  height: 25px;
+  border: 0;
+}
+
+.navbar_util_search .search_span {
+  font-size: 14px;
+  cursor: pointer;
+  border: 0;
   background-color: white;
   display: inline-block;
-  padding: 5px;
-  border-radius: 25%;
-  border: 1px solid #636363;
+  padding: 8px;
 }
 
 .navbar_sub {
   height: 20px;
-  right: 10px;
-  width: 800px;
+  right: 0px;
+  width: 720px;
   position: absolute;
   display: flex;
 }
@@ -80,22 +97,25 @@ ul {
   padding: 12px 16px;
 }
 
-.header_toggleButton {
-  display: block;
+.header_userButton {
+  display: none;
 }
 
-@media screen and (max-width: 1000px) {
+.header_locationButton {
+  display: none;
+}
+
+.header_toggleButton {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
   .inner_header {
-    margin: 0 auto;
-    position: relative;
-    width: 1100px;
     height: 70px;
-    display: flex;
-    align-items: center;
   }
 
   .header_logo i {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   .navbar_util,
@@ -103,9 +123,25 @@ ul {
     display: none;
   }
 
+  .header_userButton {
+    position: absolute;
+    right: 120px;
+    color: #0c917d;
+    font-size: 25px;
+    display: block;
+  }
+
   .header_toggleButton {
     position: absolute;
-    right: 30px;
+    right: 40px;
+    color: #0c917d;
+    font-size: 25px;
+    display: block;
+  }
+
+  .header_locationButton {
+    position: absolute;
+    right: 80px;
     color: #0c917d;
     font-size: 25px;
     display: block;
