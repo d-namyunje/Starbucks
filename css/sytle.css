@@ -1,6 +1,6 @@
 @import "./reset.css";
 body {
-  font-family: "Baloo Da 2", cursive;
+  font-family: "Nanum Myeongjo", serif;
 }
 
 a {
@@ -43,7 +43,7 @@ ul {
   height: 20px;
   right: -20px;
   top: 15px;
-  width: 680px;
+  width: 700px;
   position: absolute;
   display: flex;
 }
@@ -86,25 +86,21 @@ ul {
   padding: 8px;
 }
 
-.navbar_sub {
+.navbar_nav {
   height: 20px;
   right: 0px;
-  width: 720px;
+  width: 820px;
   position: absolute;
   display: flex;
 }
 
-.navbar_sub li {
+.navbar_nav li {
   height: 40px;
   padding: 12px 16px;
   cursor: pointer;
 }
 
-.navbar_sub li:hover {
-  background-color: black;
-}
-
-.navbar_sub li a {
+.navbar_nav li a {
   color: black;
 }
 
@@ -120,6 +116,28 @@ ul {
   display: none;
 }
 
+.navbar_nav_sub_wrap {
+  background: #2c2a29;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 66px;
+}
+
+.navbar_nav_sub {
+  padding: 20px 0 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar_nav_sub_inner {
+  float: left;
+  left: 20px;
+  margin-left: 0;
+  position: relative;
+  width: 100%;
+}
+
 @media screen and (max-width: 880px) {
   .inner_header {
     height: 70px;
@@ -130,7 +148,7 @@ ul {
   }
 
   .navbar_util,
-  .navbar_sub {
+  .navbar_nav {
     display: none;
   }
 
