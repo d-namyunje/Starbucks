@@ -88,8 +88,8 @@ ul {
 
 .navbar_nav {
   height: 20px;
-  right: 0px;
-  width: 820px;
+  right: -300px;
+  width: 100%;
   position: absolute;
   display: flex;
 }
@@ -121,21 +121,18 @@ ul {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 66px;
-}
-
-.navbar_nav_sub {
-  padding: 20px 0 20px 0;
-  display: inline-block;
-  width: 100%;
+  top: 135px;
+  display: block;
 }
 
 .navbar_nav_sub_inner {
+  padding: 20px 0 20px 0;
   float: left;
   left: 20px;
   margin-left: 0;
   position: relative;
   width: 100%;
+  display: none;
 }
 
 @media screen and (max-width: 880px) {
